@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Proccessor</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.6.0/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+</head>
+<body>
+    <div id="input-zone">
+       <div class="csv">
+           <label for="csv-input">Загрузить CSV файл:</label>
+            <input type="file" id="csv-input" accept=".csv">
+            <p>Названия площадей в таблице:</p>
+            Гостиная<input type="text" class="living-room" value="living room">
+            Комната 1<input type="text" class="room1" value="room 1">
+            Комната 2<input type="text" class="room2" value="room 2">
+            Ванная 1<input type="text" class="bath" value="bath">
+            Ванная 2<input type="text" class="bath2" value="bath2">
+            Гардероб<input type="text" class="dressing" value="dressing room">
+            Номер<input type="text" class="roomNumber" value="Номер проектный">
+            Тип номера<input type="text" class="roomType" value="Тип планировки">
+       </div>
+
+        <div class="svg">
+            <label for="svg-input">Загрузить SVG файлы:</label>
+            <input type="file" id="svg-input" accept=".svg" multiple>
+            <p>Названия площадей в SVG:</p>
+            Гостиная<input type="text" class="living-roomS" value="TXT-Кухня-гостинная-С">
+            Если 1 комната <input type="text" class="room" value="TXT-Спальня-С">
+            Комната 1<input type="text" class="room1S" value="TXT-Спальня1-С">
+            Комната 2<input type="text" class="room2S" value="TXT-Спальня2-С">
+            Ванная 1<input type="text" class="bathS" value="TXT-Санузел-С">
+            Ванная 2<input type="text" class="bath2S" value="TXT-Санузе2-С">
+            Гардероб<input type="text" class="dressingS" value="TXT-Гардеробная-С">
+            Коридор<input type="text" class="corridorS" value="TXT-Коридор-С">
+        </div>
+    </div>
+    <button id="process-btn">Начать процесс</button>
+    <button id="export-btn" style="display: none;">Экспортировать SVG</button>
+    <div class="status">status</div>
+    <script src="script.js"></script>
+</body>
+</html>
+
